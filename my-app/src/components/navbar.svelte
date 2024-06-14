@@ -80,6 +80,10 @@
         display: flex;
         list-style: none;
         align-items: center;
+        color: black;
+    }
+
+    .dark .nav-links ul {
         color: white;
     }
 
