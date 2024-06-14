@@ -1,24 +1,24 @@
 <script>
-    import Navbar from '../../components/navbar.svelte';
-    import '../../global.css'
+    import Navbar from '../../components/navbar.svelte'; // Importerer Navbar-komponenten
+    import '../../global.css' // Importerer globale stiler
 
-    // Din funksjon for pålogging
+    // Din funksjon for pålogging via Google
     function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        var profile = googleUser.getBasicProfile(); // Henter brukerens profilinformasjon
+        console.log('ID: ' + profile.getId()); // Logger brukerens ID (bør ikke sendes til backend direkte)
+        console.log('Name: ' + profile.getName()); // Logger brukerens navn
+        console.log('Image URL: ' + profile.getImageUrl()); // Logger URL til brukerens profilbilde
+        console.log('Email: ' + profile.getEmail()); // Logger brukerens e-postadresse (null hvis 'email'-scope ikke er tilgjengelig)
     }
 
-    // Kjører kode når komponenten er montert i DOM
+    // Importerer onMount fra Svelte for å kjøre kode etter komponenten er montert
     import { onMount } from 'svelte';
     onMount(() => {
-        const script = document.createElement('script');
-        script.src = 'https://apis.google.com/js/platform.js';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
+        const script = document.createElement('script'); // Oppretter et nytt script-element
+        script.src = 'https://apis.google.com/js/platform.js'; // Angir kilden til Google's platform.js
+        script.async = true; // Setter scriptet til å laste asynkront
+        script.defer = true; // Setter scriptet til å utsette utførelsen til etter at HTML-dokumentet er parset
+        document.body.appendChild(script); // Legger script-elementet til i dokumentets body
     });
 </script>
 
