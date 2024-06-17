@@ -34,7 +34,7 @@
 
 
 <div class="navbar {darkClass}" class:hide={!navbarVisible}>
-    <div class="logo">Sørby</div>
+    <div class="logo">sørby</div>
     <div class="nav-links">
         <ul>
             <li><a href="/">Hjem</a></li>
