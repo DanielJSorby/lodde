@@ -1,40 +1,52 @@
 <script>
     import { onMount } from 'svelte';
-  
+
+    // Initialiserer variabler for å spore siste scroll-posisjon og synligheten til navbar
     let lastScrollTop = 0;
     let navbarVisible = true;
-  
+
+    // Funksjon for å sjekke brukerens scroll-retning
     const checkScroll = () => {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > lastScrollTop){
-        navbarVisible = false;
-      } else {
-        navbarVisible = true;
-      }
-      lastScrollTop = st <= 0 ? 0 : st;
-    };
-  
-    onMount(() => {
-      if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', checkScroll);
-      }
-  
-      return () => {
-        if (typeof window !== 'undefined') {
-          window.removeEventListener('scroll', checkScroll);
+        // Henter nåværende scroll-posisjon
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        // Skjuler navbar hvis brukeren scroller nedover, viser den hvis oppover
+        if (st > lastScrollTop){
+            navbarVisible = false;
+        } else {
+            navbarVisible = true;
         }
-      };
+        // Oppdaterer siste kjente scroll-posisjon, resetter til 0 hvis negativ
+        lastScrollTop = st <= 0 ? 0 : st;
+    };
+
+    // Kjører når komponenten er montert
+    onMount(() => {
+        // Legger til scroll-event listener hvis window-objektet er tilgjengelig
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', checkScroll);
+        }
+
+        // Fjerner event listener når komponenten demonteres
+        return () => {
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('scroll', checkScroll);
+            }
+        };
     });
-  
+
+    // Prop for å styre om dark mode er aktivert
     export let darkmode = false;
+    // Dynamisk klasse basert på darkmode-prop
     $: darkClass = darkmode ? 'dark' : '';
-  
+
+    // Prop for å styre om brukeren er logget inn
     export let loggedIn = false;
 </script>
 
 
 <div class="navbar {darkClass}" class:hide={!navbarVisible}>
     <div class="logo">sørby</div>
+    <a href="/"><div class="logo">Sørby</div></a>
     <div class="nav-links">
         <ul>
             <li><a href="/">Hjem</a></li>
@@ -88,7 +100,7 @@
     }
 
     .nav-links ul li {
-        margin-right: 20px;
+        margin-right: 56px;
     }
 
     .nav-links ul li a {
