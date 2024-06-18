@@ -41,14 +41,15 @@
     $: darkClass = darkmode ? 'dark' : '';
 
     // Prop for å styre om brukeren er logget inn
+    
 </script>
 
 
 <div class="navbar {darkClass}" class:hide={!navbarVisible}>
-    <a href="/"><div class="logo">sørby</div></a>
     <div class="nav-links">
+        <a href="/" class="logo">sørby</a>
         <ul>
-            <li><a href="/">Hjem</a></li>
+            <li><a href="/" id="active">Hjem</a></li>
             <li><a href="/kontakt">Kontakt</a></li>
             <li><a href="/om-oss">Om Oss</a></li>
             {#if !$user.picture}
@@ -63,25 +64,45 @@
 <style>
     /* Variables */
     :root {
-        --nav-heigt: 126px;
+        --font-color: #FEFFEA;
+        --nav-height: 6rem;
     }
 
     .profile-picture {
         border-radius: 100%;
+        width: 5rem;
     }
     .navbar {
-        text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+        /* text-shadow: 2px 3px 5px rgba(0,0,0,0.3); */
         transition: top 0.3s;
         position: fixed;
-        height: var(--nav-heigt);
+        height: var(--nav-height);
+        
         top: 0;
         width: 100%;
+        
+        /* background-color: #1D55F3; */
+        font-size: 2em;
+        color: var(--font-color);
+    }
+    .nav-links {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
-        font-size: 30px;
-        color: 424242;
+        margin: 0 5vw 0 5vw;
+        height: var(--nav-height);
+    }
+    
+    .nav-links ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        color: #F8CAB4; /* mindlertidig endring på gråere farge. */
+    }
+
+    #active {
+        font-weight:600;
+        color: var(--font-color);
     }
 
     .logg-inn-btn.dark {
@@ -91,7 +112,7 @@
     }
 
     .navbar.dark {
-        color: white;
+        /* color: white; */
     }
 
     .navbar a {
@@ -99,15 +120,9 @@
         color: inherit;
     }
 
-    .nav-links ul {
-        display: flex;
-        list-style: none;
-        align-items: center;
-        color: black;
-    }
 
     .dark .nav-links ul {
-        color: white;
+        /* color: white; */
     }
 
     .nav-links ul li {
