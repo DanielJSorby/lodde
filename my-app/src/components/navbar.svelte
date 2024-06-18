@@ -72,6 +72,9 @@
         border-radius: 100%;
         width: 5rem;
     }
+    .logo {
+        font-size: 1.6em;
+    }
     .navbar {
         /* text-shadow: 2px 3px 5px rgba(0,0,0,0.3); */
         transition: top 0.3s;
@@ -82,7 +85,7 @@
         width: 100%;
         
         /* background-color: #1D55F3; */
-        font-size: 2em;
+        font-size: 1.5em;
         color: var(--font-color);
     }
     .nav-links {

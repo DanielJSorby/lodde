@@ -6,22 +6,22 @@
 
 <body>
 	<Navbar darkmode={true}/>
-	<div class="start"> <!-- Headder -->
-		<div class="start-things">
+	<div class="headder"> <!-- Headder -->
+		<div class="headder-things">
 			<div class="title">
 				<h1>Lodd</h1>
 			</div>
 			<div class="subtitle">
 				<p>Norges nettbasserte<br>Loddsystem</p>
 			</div>
-			<div class="cta">
-				<button class="kig background blue">Kom i gang</button>
-				<button class="fum transparent">Finn ut mer</button>
+			<div class="button">
+				<button class="cta background blue">Kom i gang</button>
+				<button class="cta transparent">Finn ut mer</button>
 			</div>
 		</div>
 	</div>
 	
-	<div class="start-info-containers">
+	<div class="tjeneste-containers">
 		<Tjeneste>
 			<svg class="image" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M47.0215 8.15625C45.334 8.57812 44.6484 9.10546 41.0977 12.6211L37.6172 16.0664L39.375 17.8594C40.9219 19.4238 41.1328 19.7051 41.1328 20.25C41.1328 21.041 40.5352 21.6211 39.7266 21.6211C39.2344 21.6211 38.9004 21.375 37.3711 19.8633L35.5781 18.123L24.5566 29.1445C18.4922 35.209 13.5352 40.2187 13.5352 40.3066C13.5352 40.4648 29.6719 40.4648 45.668 40.3066L57.6562 40.2012L56.25 38.7598C55.4766 37.9512 54.8262 37.1602 54.8262 36.9844C54.7559 35.8594 55.2129 35.2617 56.1621 35.2617C56.7246 35.2617 56.9883 35.4551 58.5879 37.0547L60.3984 38.8652L63.7383 35.4727C66.5684 32.6074 67.1836 31.8867 67.6934 30.8496C68.2559 29.6719 68.291 29.5312 68.291 27.6855C68.291 25.9102 68.2559 25.6641 67.7812 24.7148C67.2363 23.625 65.2852 21.4102 64.4941 20.9883C63.7559 20.6191 62.6133 20.6895 61.5762 21.1641C59.4844 22.1484 57.709 21.8672 56.1797 20.3379C54.7734 18.9141 54.4219 16.9805 55.2656 15.1875C56.2324 13.0957 56.0742 12.375 54.1934 10.5117C51.8555 8.20898 49.6934 7.48828 47.0215 8.15625ZM45.791 24.2754C47.3555 25.7871 47.6016 26.2793 47.25 27.0352C46.8984 27.7559 46.2129 28.0195 45.4922 27.7207C44.7188 27.3867 42.3633 24.9258 42.3633 24.4687C42.3633 23.9062 42.7148 23.2559 43.1367 23.0625C43.9629 22.6582 44.2969 22.8164 45.791 24.2754ZM51.9609 30.4277C53.5605 31.9922 53.8418 32.5898 53.3496 33.3281C53.0156 33.8555 52.2949 34.1543 51.7852 33.9961C51.3105 33.8379 49.0781 31.6934 48.7617 31.0781C48.4453 30.4629 48.6035 29.8125 49.166 29.3555C49.9746 28.7227 50.3789 28.8809 51.9609 30.4277Z" fill="#011936"/>
@@ -55,42 +55,46 @@
 		right: 30px;
 		transform: translateX(-50%);
 	}
-	.start {
+	.headder {
 		height: 92vh;
 		width: 100%;
+		display: flex;
+
 		background-color: #E94F37;
 		color: white;
-		border-radius: 0 0 80px 80px;
-		display: flex;
+
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		
+		border-radius: 0 0 80px 80px;
 		box-shadow: 0px 8vh 0px 1px rgba(255,166,33,1);
 	}
 
-	.start h1 {
-		font-size: 300px;
-		margin-bottom: -90px;
+	.title {
+		font-size: 8em;
+		text-transform: uppercase;
+		/* margin-bottom: -90px; */
 	}
 
-	.start p {
-		font-size: 30px;
+	.subtitle p {
+		font-size: 2em;
 	}
 
-	.start .cta {
-		font-size: 30px;
-		padding: 10px 20px;
+	.cta {
+		font-size: 1.5em;
+		padding: 15px 40px;
 		border-radius: 20px;
 		margin: 10px;
 	}
 
-	.start-things {
+	.headder-things {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
 	}
 
-	.start-info-containers {
+	.tjeneste-containers {
 		display: flex;
 		justify-content: space-around;
 		margin: 45px 0;
