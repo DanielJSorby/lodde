@@ -49,8 +49,14 @@
 </body>
 
 <style>
+	.down-arrow {
+		position: absolute;
+		bottom: 0;
+		right: 30px;
+		transform: translateX(-50%);
+	}
 	.start {
-		height: 100vh;
+		height: 92vh;
 		width: 100%;
 		background-color: #E94F37;
 		color: white;
@@ -59,7 +65,7 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		box-shadow: 0px 5vh 0px 1px rgba(255,166,33,1);
+		box-shadow: 0px 8vh 0px 1px rgba(255,166,33,1);
 	}
 
 	.start h1 {
