@@ -45,8 +45,7 @@
 
 
 <div class="navbar {darkClass}" class:hide={!navbarVisible}>
-    <div class="logo">sørby</div>
-    <a href="/"><div class="logo">Sørby</div></a>
+    <a href="/"><div class="logo">sørby</div></a>
     <div class="nav-links">
         <ul>
             <li><a href="/">Hjem</a></li>
@@ -86,6 +85,11 @@
 
     .navbar.dark {
         color: white;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: inherit;
     }
 
     .nav-links ul {
