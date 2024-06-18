@@ -70,6 +70,7 @@
         border-radius: 100%;
     }
     .navbar {
+        text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
         transition: top 0.3s;
         position: fixed;
         height: var(--nav-heigt);
