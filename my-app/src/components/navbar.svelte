@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { user } from '/src/Store/userStore.js';
 
     // Initialiserer variabler for å spore siste scroll-posisjon og synligheten til navbar
     let lastScrollTop = 0;
@@ -40,7 +41,6 @@
     $: darkClass = darkmode ? 'dark' : '';
 
     // Prop for å styre om brukeren er logget inn
-    export let loggedIn = false;
 </script>
 
 
@@ -51,8 +51,10 @@
             <li><a href="/">Hjem</a></li>
             <li><a href="/kontakt">Kontakt</a></li>
             <li><a href="/om-oss">Om Oss</a></li>
-            {#if !loggedIn}
+            {#if !$user.picture}
                 <a href="/logg-inn"><button class="logg-inn-btn {darkClass}">Logg Inn</button></a>
+            {:else}
+            <img src="{$user.picture}" alt="Profile" class="profile-picture"> 
             {/if}
         </ul>
     </div>
@@ -62,6 +64,10 @@
     /* Variables */
     :root {
         --nav-heigt: 126px;
+    }
+
+    .profile-picture {
+        border-radius: 100%;
     }
     .navbar {
         transition: top 0.3s;
