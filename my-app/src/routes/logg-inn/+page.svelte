@@ -27,26 +27,34 @@
     });
 
     // Callback-funksjonen som kjøres etter vellykket innlogging
-    function onSignIn(response) {
-    // Hent ID-token fra responsen
-    const id_token = response.credential;
+    import { user } from '../../Store/userStore.js'; // Oppdater med korrekt sti
 
-    // Dekod ID-token. Dette eksemplet bruker en enkel metode for å dekode JWT-tokenet.
-    // Merk: Dette bør gjøres på server-siden i en produksjonsapp for sikkerhet.
-    const payload = JSON.parse(atob(id_token.split('.')[1]));
-    
-    // Nå kan du få tilgang til brukerinformasjon fra payload
-    console.log('User ID: ' + payload.sub); // Brukerens unike ID
-    console.log('User Name: ' + payload.name);
-    console.log('User Email: ' + payload.email);
-    console.log('User Picture: ' + payload.picture);
-}
+    function onSignIn(response) {
+        const id_token = response.credential;
+        // Dekoder fra Base64Url til en UTF-8 streng
+        const base64UrlPayload = id_token.split('.')[1];
+        const base64Payload = base64UrlPayload.replace(/-/g, '+').replace(/_/g, '/');
+        const payload = JSON.parse(decodeURIComponent(atob(base64Payload).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join('')));
+
+        // Oppdaterer Svelte store med brukerinformasjon
+        user.set({
+            id: payload.sub,
+            name: payload.name,
+            email: payload.email,
+            picture: payload.picture
+        });
+    }
 </script>
 
 <Navbar />
 <div class="sign-in-container">
-    <div id="sign-in" class="sign-in">
-        <h1>Logg inn</h1>
+    <div class="sign-in">
+        <h1>Logg Inn</h1>
+        <div id="sign-in">
+            <h1>Logg inn</h1>
+        </div>
     </div>
 </div>
 
@@ -56,11 +64,6 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-    }
-
-    .google-btn-container {
-        border-radius: 24px; /* Avrundede hjørner */
-        overflow: hidden; /* Sikrer at innholdet også følger de avrundede hjørnene */
     }
 
     .sign-in {
