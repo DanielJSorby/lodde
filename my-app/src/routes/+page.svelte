@@ -20,7 +20,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="start-bg"></div>
+	
 	<div class="start-info-containers">
 		<StartInfo>
 			<svg class="image" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,16 +49,6 @@
 </body>
 
 <style>
-	.start-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 108vh;
-		width: 100%;
-		background-color: #FFA621;
-		z-index: -1;
-		border-radius: 0 0 80px 80px;
-	}
 	.start {
 		height: 100vh;
 		width: 100%;
@@ -69,6 +59,7 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		box-shadow: 0px 5vh 0px 1px rgba(255,166,33,1);
 	}
 
 	.start h1 {
