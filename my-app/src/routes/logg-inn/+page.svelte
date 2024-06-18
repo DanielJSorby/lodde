@@ -1,36 +1,52 @@
 <script>
-    import Navbar from '../../components/navbar.svelte'; // Importerer Navbar-komponenten
-    import '../../global.css' // Importerer globale stiler
-
-    // Din funksjon for pålogging via Google
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile(); // Henter brukerens profilinformasjon
-        console.log('ID: ' + profile.getId()); // Logger brukerens ID (bør ikke sendes til backend direkte)
-        console.log('Name: ' + profile.getName()); // Logger brukerens navn
-        console.log('Image URL: ' + profile.getImageUrl()); // Logger URL til brukerens profilbilde
-        console.log('Email: ' + profile.getEmail()); // Logger brukerens e-postadresse (null hvis 'email'-scope ikke er tilgjengelig)
-    }
-
-    // Importerer onMount fra Svelte for å kjøre kode etter komponenten er montert
+    import Navbar from '../../components/navbar.svelte';
+    import '../../global.css';
     import { onMount } from 'svelte';
+
     onMount(() => {
-        const script = document.createElement('script'); // Oppretter et nytt script-element
-        script.src = 'https://apis.google.com/js/platform.js'; // Angir kilden til Google's platform.js
-        script.async = true; // Setter scriptet til å laste asynkront
-        script.defer = true; // Setter scriptet til å utsette utførelsen til etter at HTML-dokumentet er parset
-        document.body.appendChild(script); // Legger script-elementet til i dokumentets body
+        // Last inn GIS-biblioteket
+        const script = document.createElement('script');
+        script.src = 'https://accounts.google.com/gsi/client';
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+
+        script.onload = () => {
+            // Initialiser GIS
+            google.accounts.id.initialize({
+                client_id: '1059100718256-0j00u0ut641bqurhfaf8o9p7nctkvsik.apps.googleusercontent.com', // Erstatt med din klient-ID
+                callback: onSignIn,
+            });
+
+            // Opprett en Sign-In-knapp
+            google.accounts.id.renderButton(
+                document.getElementById('sign-in'), // Elementet hvor knappen skal vises
+                { theme: 'outline', size: 'large' }  // Tilpasningsalternativer
+            );
+        };
     });
+
+    // Callback-funksjonen som kjøres etter vellykket innlogging
+    function onSignIn(response) {
+    // Hent ID-token fra responsen
+    const id_token = response.credential;
+
+    // Dekod ID-token. Dette eksemplet bruker en enkel metode for å dekode JWT-tokenet.
+    // Merk: Dette bør gjøres på server-siden i en produksjonsapp for sikkerhet.
+    const payload = JSON.parse(atob(id_token.split('.')[1]));
+    
+    // Nå kan du få tilgang til brukerinformasjon fra payload
+    console.log('User ID: ' + payload.sub); // Brukerens unike ID
+    console.log('User Name: ' + payload.name);
+    console.log('User Email: ' + payload.email);
+    console.log('User Picture: ' + payload.picture);
+}
 </script>
 
 <Navbar />
 <div class="sign-in-container">
-    <div class="sign-in">
+    <div id="sign-in" class="sign-in">
         <h1>Logg inn</h1>
-        <div class="sign-in-options">
-            <div class="google-btn-container">
-                <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true"></div>
-            </div>
-        </div>
     </div>
 </div>
 
