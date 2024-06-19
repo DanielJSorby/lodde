@@ -6,17 +6,19 @@
 
 <body>
 	<Navbar darkmode={true}/>
-	<div class="headder"> <!-- Headder -->
-		<div class="headder-things">
-			<div class="title">
-				<h1>Lodd</h1>
-			</div>
-			<div class="subtitle">
-				<p>Norges nettbasserte<br>Loddsystem</p>
-			</div>
-			<div class="button">
-				<button class="cta background blue">Kom i gang</button>
-				<button class="cta transparent">Finn ut mer</button>
+	<div class="header-yellow">
+		<div class="headder"> <!-- Headder -->
+			<div class="headder-things">
+				<div class="title">
+					<h1>Lodd</h1>
+				</div>
+				<div class="subtitle">
+					<p>Norges nettbasserte<br>Loddsystem</p>
+				</div>
+				<div class="button">
+					<button class="cta background blue">Kom i gang</button>
+					<button class="cta transparent">Finn ut mer</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,16 +61,19 @@
 		height: 92vh;
 		width: 100%;
 		display: flex;
-
-		background-color: #E94F37;
-		color: white;
-
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		
+		background-color: #E94F37;
+		color: white;
 		border-radius: 0 0 80px 80px;
-		box-shadow: 0px 8vh 0px 1px rgba(255,166,33,1);
+		/* box-shadow: 0px 8vh 0px 1px rgba(255,166,33,1); */
+	}
+
+	.header-yellow {
+		background-color: #ffa621;
+		height: 100vh;
+		border-radius: 0 0 80px 80px;
 	}
 
 	.title {
