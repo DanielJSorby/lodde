@@ -17,6 +17,11 @@ button {
     padding: 20px;
     border-radius: 15px;
     font-size: 30px;
+    transition: .3s;
+}
+button:hover {
+    scale: 1.04;
+    transition: .3s;
 }
 
 button.background {

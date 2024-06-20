@@ -15,7 +15,7 @@
 				
 			<div class="headder-things">
 				<div class="title">
-					<h1>Lodd</h1>
+					<h1>Lodde</h1>
 				</div>
 				<div class="subtitle">
 					<p>Norges nettbasserte<br>Loddsystem</p>
@@ -58,7 +58,7 @@
 <style>
 	.down-arrow {
 		position: absolute;
-		bottom: 55px;
+		bottom: 7vh;
 		right: 30px;
 		transform: translateX(-50%);
 	}
@@ -90,10 +90,10 @@
 		font-weight: 600;
 	}
 	.title {
-		font-size: 7em;
+		font-size: 5em;
 		
 		text-transform: uppercase;
-		margin: -3.8rem 0;
+		margin: -2rem 0;
 		/* margin-bottom: -90px; */
 	}
 
