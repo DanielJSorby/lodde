@@ -93,7 +93,7 @@
 		font-size: 7em;
 		
 		text-transform: uppercase;
-		margin: -2.5rem 0;
+		margin: -3.8rem 0;
 		/* margin-bottom: -90px; */
 	}
 
