@@ -58,12 +58,12 @@
 <style>
 	.down-arrow {
 		position: absolute;
-		bottom: 100px;
+		bottom: 55px;
 		right: 30px;
 		transform: translateX(-50%);
 	}
 	.headder {
-		height: 82vh;
+		height: 87vh;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -71,36 +71,43 @@
 		text-align: center;
 		background-color: #E94F37;
 		color: white;
-		border-radius: 0 0 80px 80px;
+		border-radius: var(--border-radius);
 		/* box-shadow: 0px 8vh 0px 1px rgba(255,166,33,1); */
 	}
 
 	.header-yellow {
+		--border-radius: 0 0 4rem 4rem;
 		background-color: #ffa621;
-		height: 90vh;
-		border-radius: 0 0 80px 80px;
+		height: 95vh;
+		border-radius: var(--border-radius);
 	}
 
 	.headder-things {
-		margin-top: 7rem;
+		margin-top: 5rem;
 	}
 
+	h1 {
+		font-weight: 600;
+	}
 	.title {
-		font-size: 6em;
+		font-size: 7em;
+		
 		text-transform: uppercase;
-		margin: -2rem 0;
+		margin: -2.5rem 0;
 		/* margin-bottom: -90px; */
 	}
 
 	.subtitle p {
 		font-size: 1.2em;
+		font-weight: 300;
 	}
 
 	.cta {
 		font-size: 1.5em;
+		font-weight: 500;
 		padding: 15px 30px;
 		border-radius: 20px;
-		margin: 2rem 1rem;
+		margin: 1.5rem 0.6rem;
 	}
 
 	.headder-things {

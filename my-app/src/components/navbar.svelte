@@ -92,7 +92,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 5vw 0 5vw;
+        margin: 0 5vw;
         height: var(--nav-height);
     }
     
@@ -115,8 +115,8 @@
     }
 
     .logg-inn-btn {
-        padding: 10px 20px 10px 20px;
-        font-size: 1.2em;
+        padding: 0.5rem 1.5rem;
+        font-size: 1em;
     }
 
     .navbar.dark {
@@ -134,7 +134,7 @@
     }
 
     .nav-links ul li {
-        margin-right: 56px;
+        margin-right: 3rem;
     }
 
     .nav-links ul li a {
