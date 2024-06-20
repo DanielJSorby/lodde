@@ -9,12 +9,22 @@
         align-items: center;
         flex-direction: column;
         padding: 20px;
-        color: #011936;
-        width: 400px;
+
+        color: var(--color-svart);
+        max-width: 25rem;
         text-align: center;
     }
-
-    .image {
-        margin-bottom: 20px;
+    .box:nth-child(1){
+        max-width: 17rem;
     }
+    .box:nth-child(2){
+        max-width: 18rem;
+    }
+    .box:nth-child(3){
+        max-width: 25rem;
+    }
+
+    /* .image {
+        margin-bottom: 20px;
+    } */
 </style>
