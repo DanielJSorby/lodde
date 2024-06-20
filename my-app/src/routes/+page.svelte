@@ -81,9 +81,14 @@
 		border-radius: 0 0 80px 80px;
 	}
 
+	.headder-things {
+		margin-top: 7rem;
+	}
+
 	.title {
 		font-size: 6em;
 		text-transform: uppercase;
+		margin: -2rem 0;
 		/* margin-bottom: -90px; */
 	}
 
@@ -93,9 +98,9 @@
 
 	.cta {
 		font-size: 1.5em;
-		padding: 15px 40px;
+		padding: 15px 30px;
 		border-radius: 20px;
-		margin: 10px;
+		margin: 2rem 1rem;
 	}
 
 	.headder-things {

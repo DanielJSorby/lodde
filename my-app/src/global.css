@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
+    --color-besj: #FEFFEA;
+    --color-blue-lilla: #1D55F3;
+    --color-svart: #011936;
+    --color-red: #E94F37;
+    --color-gul: #FFA621;
 }
 
 button {
@@ -19,20 +25,20 @@ button.background {
 }
 
 button.background.red {
-    background-color: #E94F37;
+    background-color: var(--color-red);
 }
 
 button.background.blue {
-    background-color: #1D55F3;
+    background-color: var(--color-blue-lilla);
 }
 
 button.transparent {
     background-color: transparent;
-    color: #fff;
+    color: var(--color-besj);
     box-sizing: border-box;
     background-clip: padding-box;
     /* Simulerer en "indre" border ved å bruke box-shadow */
-    box-shadow: inset 0 0 0 0.3rem #fff;
+    box-shadow: inset 0 0 0 0.3rem var(--color-besj);
     /* Fjerner den faktiske borderen */
     border: none;
 }
