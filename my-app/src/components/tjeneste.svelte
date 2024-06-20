@@ -8,7 +8,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 20px;
 
         color: var(--color-svart);
         max-width: 25rem;
@@ -23,8 +22,4 @@
     .box:nth-child(3){
         max-width: 25rem;
     }
-
-    /* .image {
-        margin-bottom: 20px;
-    } */
 </style>
