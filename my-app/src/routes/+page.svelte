@@ -101,7 +101,7 @@
 
 	.tjeneste-containers {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		margin: 45px 0;
 	}
 </style>
