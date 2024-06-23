@@ -87,6 +87,7 @@
         /* background-color: #1D55F3; */
         font-size: 1.5em;
         color: var(--font-color);
+        z-index: 100;
     }
     .nav-links {
         display: flex;
@@ -100,7 +101,7 @@
         display: flex;
         list-style: none;
         align-items: center;
-        color: #F8CAB4; /* mindlertidig endring på gråere farge. */
+        color: hsla(63, 100%, 96%, 0.7); /* mindlertidig endring på gråere farge. */
     }
 
     #active {

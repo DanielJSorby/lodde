@@ -77,13 +77,21 @@
 			<h2>Har du opplevd å miste oversikten over solgte lodd, eller <a>prøvd å oppdatere</a> en manuell loddbok?</h2>
 			<div class="verdi-tekst">
 				<p>Vi kjenner frustrasjonen. Det er lett å gjøre feil, og det er krevende å holde alt organisert. Med vår digitale løsning slipper du dette. Automatisert, sikkert og tilgjengelig hvor som helst, når som helst. La oss gjøre loddsalget enklere for deg.</p>
-				<button class="button" >Finn ut mer</button>
+				<a class="black-button" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+					Finn ut mer
+					<svg class="button-arrow" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM19.7071 8.20711C20.0976 7.81658 20.0976 7.18342 19.7071 6.79289L13.3431 0.428932C12.9526 0.0384078 12.3195 0.0384078 11.9289 0.428932C11.5384 0.819457 11.5384 1.45262 11.9289 1.84315L17.5858 7.5L11.9289 13.1569C11.5384 13.5474 11.5384 14.1805 11.9289 14.5711C12.3195 14.9616 12.9526 14.9616 13.3431 14.5711L19.7071 8.20711ZM1 8.5H19V6.5H1V8.5Z" fill="white"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</div>
 </body>
 
 <style>
+	body {
+		height: 200vw;
+	}
 	.down-arrow {
 		position: absolute;
 		bottom: 7vh;
@@ -111,14 +119,14 @@
 	}
 
 	.headder-things {
-		margin-top: 5rem;
+		margin-top: 7rem;
 	}
 
 	h1 {
 		font-weight: 600;
 	}
 	.title {
-		font-size: 5em;
+		font-size: 7em;
 		
 		text-transform: uppercase;
 		margin: -2rem 0;
@@ -126,7 +134,7 @@
 	}
 
 	.subtitle p {
-		font-size: 1.2em;
+		font-size: 1.5em;
 		font-weight: 300;
 	}
 
@@ -135,7 +143,7 @@
 		font-weight: 500;
 		padding: 15px 30px;
 		border-radius: 20px;
-		margin: 1.5rem 0.6rem;
+		margin: 3rem 0.6rem;
 	}
 
 	.headder-things {
@@ -154,14 +162,40 @@
 	.verdi-innhold {
 		display: flex;
 		color: var(--color-svart);
-		margin: 0 5vw;
-		border: 0.8rem solid #E94F37;
+		margin: 0 6vw;
+		padding: 6rem 8rem;
+		border: 1rem solid #E94F37;
+		border-radius: 2rem;
+		box-shadow: -1.4rem 1.4rem #AE3522;
+		gap: 4rem;
 	}
 	.verdi-innhold h2 {
-		font-size: 2em;
+		font-size: 2.8em;
 		font-weight: 600;
+		max-width: 60rem;
 	}
 	.verdi-innhold h2 a {
 		color: var(--color-red);
+	}
+	.verdi-tekst {
+		max-width: 56rem;
+		font-size: 1.5em;
+		font-weight: 300;
+		color: hsla(213, 96%, 11%, 0.7);
+	}
+	.verdi-tekst p {
+		padding-bottom: 4rem;
+	}
+	.black-button {
+		background-color: var(--color-svart);
+		color: white;
+		border-radius: 5rem;
+		font-size: 0.7em;
+		font-weight: 500;
+		padding: 1.2rem 2rem;
+		text-decoration: none;
+	}
+	.black-button svg {
+		margin-left: 1rem;
 	}
 </style>
