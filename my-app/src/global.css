@@ -11,6 +11,7 @@ button {
     padding: 20px;
     border-radius: 20px;
     font-size: 30px;
+    font-weight: 500;
 }
 
 button.background {
