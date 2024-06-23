@@ -72,6 +72,15 @@
 			</div>
 		</Tjeneste>
 	</div>
+	<div class="verdi-seksjon">
+		<div class="verdi-innhold">
+			<h2>Har du opplevd å miste oversikten over solgte lodd, eller <a>prøvd å oppdatere</a> en manuell loddbok?</h2>
+			<div class="verdi-tekst">
+				<p>Vi kjenner frustrasjonen. Det er lett å gjøre feil, og det er krevende å holde alt organisert. Med vår digitale løsning slipper du dette. Automatisert, sikkert og tilgjengelig hvor som helst, når som helst. La oss gjøre loddsalget enklere for deg.</p>
+				<button class="button" >Finn ut mer</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 <style>
@@ -138,7 +147,21 @@
 	.tjeneste-containers {
 		display: flex;
 		/* justify-content: space-around; */
-		margin: 4rem 0;
-		justify-content: center;
+		margin: 4rem 15rem;
+		justify-content: space-between;
+	}
+
+	.verdi-innhold {
+		display: flex;
+		color: var(--color-svart);
+		margin: 0 5vw;
+		border: 0.8rem solid #E94F37;
+	}
+	.verdi-innhold h2 {
+		font-size: 2em;
+		font-weight: 600;
+	}
+	.verdi-innhold h2 a {
+		color: var(--color-red);
 	}
 </style>

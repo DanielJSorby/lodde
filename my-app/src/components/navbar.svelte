@@ -47,7 +47,7 @@
 
 <div class="navbar {darkClass}" class:hide={!navbarVisible}>
     <div class="nav-links">
-        <a href="/" class="logo">sørby</a>
+        <a href="/" class="logo">lodde</a>
         <ul>
             <li><a href="/" id="active">Hjem</a></li>
             <li><a href="/kontakt">Kontakt</a></li>
