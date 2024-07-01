@@ -14,7 +14,7 @@
 			</svg>
 			<div class="headder-things">
 				<div class="title">
-					<h1>Lodd</h1>
+					<h1>Lodde</h1>
 				</div>
 				<div class="subtitle">
 					<p>Norges nettbasserte<br>Loddsystem</p>
@@ -117,5 +117,6 @@
 		display: flex;
 		justify-content: center;
 		margin: 45px 0;
+		height: 200px;
 	}
 </style>
