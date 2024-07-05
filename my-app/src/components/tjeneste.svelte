@@ -5,21 +5,17 @@
 <style>
     .box {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
-
-        color: var(--color-svart);
-        max-width: 25rem;
+        padding: 20px;
+        color: #011936;
+        width: 400px;
         text-align: center;
+        height: 100%;
     }
-    .box:nth-child(1){
-        max-width: 17rem;
-    }
-    .box:nth-child(2){
-        max-width: 18rem;
-    }
-    .box:nth-child(3){
-        max-width: 25rem;
+
+    .image {
+        margin-bottom: 20px;
     }
 </style>
