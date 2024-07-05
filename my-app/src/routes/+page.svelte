@@ -66,7 +66,7 @@
 	</div>
 	<div class="verdi-seksjon">
 		<div class="verdi-innhold">
-			<h2>Har du opplevd å miste oversikten over solgte lodd, eller <a>prøvd å oppdatere</a> en manuell loddbok?</h2>
+			<h2>Har du opplevd å miste oversikten over solgte lodd, eller <span>prøvd å oppdatere</span> en manuell loddbok?</h2>
 			<div class="verdi-tekst">
 				<p>Vi kjenner frustrasjonen. Det er lett å gjøre feil, og det er krevende å holde alt organisert. Med vår digitale løsning slipper du dette. Automatisert, sikkert og tilgjengelig hvor som helst, når som helst. La oss gjøre loddsalget enklere for deg.</p>
 				<a class="black-button" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
@@ -175,7 +175,7 @@
 		font-weight: 600;
 		max-width: 60rem;
 	}
-	.verdi-innhold h2 a {
+	.verdi-innhold h2 span {
 		color: var(--color-red);
 	}
 	.verdi-tekst {
