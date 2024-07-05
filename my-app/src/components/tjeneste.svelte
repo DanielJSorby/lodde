@@ -14,8 +14,4 @@
         text-align: center;
         height: 100%;
     }
-
-    .image {
-        margin-bottom: 20px;
-    }
 </style>
